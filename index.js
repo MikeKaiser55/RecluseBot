@@ -15,7 +15,7 @@ client.categories = fs.readdirSync("./commands/");
 //status
 client.on('ready', () => {
   console.log("im here for you senpai!")
-  client.user.setActivity('r!help', { type: "PLAYING" }).catch(console.error);
+  client.user.setActivity('r!help', { type: 'PLAYING' }).catch(console.error);
 })
 //command handler and custom prefix
 client.on('message', async message => {
