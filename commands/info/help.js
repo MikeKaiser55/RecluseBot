@@ -28,7 +28,7 @@ module.exports = {
                 inline: false
             },
             {
-                name: `${emo} Utility[6]`,
+                name: `${emo} Utility[5]`,
                 value: '`calculate`,`clear`,`lock(on/off)`,`slowmode`, \n `snipe`.',
                 inline: false
             },
