@@ -13,8 +13,6 @@ module.exports = {
             return getCMD(client, message, args[0]);
         } 
         const emo = client.emojis.cache.find(emoji => emoji.name === 'bruh');
-        let Oprefix = await db.get(`prefix_${message.guild.id}`)
-        if (!Oprefix) Oprefix = prefix;
         const embed = new MessageEmbed()
         .setTitle('Recluse Command List')
         .setDescription(`This server\'s prefix is **${prefix}** \n To get help on a specific command: **${prefix}help  <command name>** \n Recluse Support Server: https://discord.gg/65jpkBz \n Wanna add Recluse to your server? [Click Here!](https://discord.com/oauth2/authorize?client_id=746318348677152778&permissions=8&scope=bot)`)
