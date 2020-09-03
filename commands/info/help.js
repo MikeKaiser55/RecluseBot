@@ -13,11 +13,11 @@ module.exports = {
             return getCMD(client, message, args[0]);
         } 
         const emo = client.emojis.cache.find(emoji => emoji.name === 'bruh');
-        let Oprefix = await db.get(`Oprefix_${message.guild.id}`)
+        let Oprefix = await db.get(`prefix_${message.guild.id}`)
         if (!Oprefix) Oprefix = prefix;
         const embed = new MessageEmbed()
         .setTitle('Recluse Command List')
-        .setDescription(`This server\'s prefix is **${Oprefix}** \n To get help on a specific command: **${Oprefix}help  <command name>** \n Recluse Support Server: https://discord.gg/65jpkBz \n Wanna add Recluse to your server? [Click Here!](https://discord.com/oauth2/authorize?client_id=746318348677152778&permissions=8&scope=bot)`)
+        .setDescription(`This server\'s prefix is **${prefix}** \n To get help on a specific command: **${prefix}help  <command name>** \n Recluse Support Server: https://discord.gg/65jpkBz \n Wanna add Recluse to your server? [Click Here!](https://discord.com/oauth2/authorize?client_id=746318348677152778&permissions=8&scope=bot)`)
         .setThumbnail('https://media2.giphy.com/media/401pPJe8AtsC55e1y8/giphy.gif')
         .setColor(0x000000)
         .setFooter(`Requested By: ${message.author.tag}`, message.author.displayAvatarURL())
@@ -29,7 +29,7 @@ module.exports = {
             },
             {
                 name: `${emo} Utility[6]`,
-                value: '`calculate`,`clear`,`lock(on/off)`,`setprefix`,`slowmode`, \n `snipe`.',
+                value: '`calculate`,`clear`,`lock(on/off)`,`slowmode`, \n `snipe`.',
                 inline: false
             },
             {

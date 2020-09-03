@@ -21,12 +21,7 @@ client.on('ready', () => {
 client.on('message', async message => {
   if (message.author.bot) return;
   if (!message.guild) return;
-  let Oprefix = await db.get(`Oprefix_${message.guild.id}`)
-  if (Oprefix === null) Oprefix = prefix;
-  if (message.mentions.has(client.user)) {
-    message.channel.send(`Your guild prefix is **${Oprefix}**`)
-  }
-  if (!message.content.startsWith(Oprefix)) return;
+  if (!message.content.startsWith(prefix)) return;
   if (!message.member) message.member = await message.guild.fetchMember(message);
   let args = message.content.slice(prefix.length).trim().split(/ +/g);
   let cmd = args.shift().toLowerCase();
