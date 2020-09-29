@@ -41,6 +41,11 @@ module.exports = {
                 inline: false
             },
             {
+                name: `${emo} Music[11]`,
+                value: '`play`,`skip`,`pause`,`resume`,`queue`,`np`.',
+                inline: false
+            },
+            {
                 name: `${emo} Owner[5]`,
                 value: '`Bot owner only`.',
                 inline: false
