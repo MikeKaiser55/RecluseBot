@@ -9,6 +9,7 @@
   "author": "MikeKaiser",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "anime-scraper": "^3.1.1",
     "ascii": "^1.0.0",
     "ascii-table": "0.0.9",
