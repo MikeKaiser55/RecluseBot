@@ -41,7 +41,7 @@ module.exports = {
                 inline: false
             },
             {
-                name: `${emo} Music[11]`,
+                name: `${emo} Music[6]`,
                 value: '`play`,`skip`,`pause`,`resume`,`queue`,`np`.',
                 inline: false
             },
