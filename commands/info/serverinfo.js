@@ -48,7 +48,7 @@ module.exports = {
         const embed = new MessageEmbed()
           .setTitle(name)
           .setThumbnail(guild.iconURL({ dynamic: true, size: 1024 }))
-          .setColor("BLUE")
+          .setColor("0x000000")
           .addField("**Server Owner**", owner, true)
           .addField("**Roles Count**", roles, true)
           .addField("**Channel Count**", channels, true)
