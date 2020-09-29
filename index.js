@@ -4,6 +4,7 @@ const { token, prefix } = require('./config.json');
 const client = new Client({ disableEveryone: true });
 const db = require('quick.db');
 const youtubeapi = 'AIzaSyBOtkioN-WQypvySrqX7kkQWx8CQSdrLbo';
+const YouTube = require('simple-youtube-api');
 const fs = require('fs');
 const ytdl = require('ytdl-core');
 const youtube = new YouTube(youtubeapi);
