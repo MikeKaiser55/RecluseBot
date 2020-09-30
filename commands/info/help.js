@@ -42,7 +42,7 @@ module.exports = {
             },
             {
                 name: `${emo} Music[6]`,
-                value: '`play`,`skip`,`pause`,`resume`,`queue`,`np`.',
+                value: '`play`,`stop`,`skip`,`pause`,`resume`,`queue`,`np`.',
                 inline: false
             },
             {
