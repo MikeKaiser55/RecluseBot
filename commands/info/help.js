@@ -36,8 +36,8 @@ module.exports = {
                 inline: false
             },
             {
-                name: `${emo} Information[11]`,
-                value: '`avatar`,`botinfo`,`covid`,`help`,`oldest`,`ping`,`serverinfo`, \n `uptime`,`userinfo`,`weather`,`youngest`.',
+                name: `${emo} Information[12]`,
+                value: '`avatar`,`botinfo`,`covid`,`help`,`oldest`,`ping`,`serverinfo`, \n `uptime`,`urban`,`userinfo`,`weather`,`youngest`.',
                 inline: false
             },
             {
