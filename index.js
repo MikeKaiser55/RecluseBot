@@ -218,4 +218,43 @@ client.on('messageDelete', function (message, channel) {
   })
 
 })
+//urban
+client.on('message', async message => {
+  const args = message.content.substring(prefix.length).split(" ")
+
+  if (message.content.startsWith(`${prefix}urban`)) {
+    const searchString = querystring.stringify({ term: args.slice(1).join(" ") })
+
+    if (!args.slice(1).join(" ")) return message.channel.send(new MessageEmbed()
+      .setColor("0x000000")
+      .setDescription(`You need to specify something you want to search the urban dictionary`)
+    )
+
+    const { list } = await fetch(`https://api.urbandictionary.com/v0/define?${searchString}`).then(response => response.json())
+
+    try {
+      const [answer] = list
+
+      const trim = (str, max) => ((str.length > max) ? `${str.slice(0, max - 3)}...` : str)
+
+      const embed = new Discord.MessageEmbed()
+        .setColor("0x000000")
+        .setTitle(answer.word)
+        .setURL(answer.permalink)
+        .setThumbnail('https://s3.amazonaws.com/pushbullet-uploads/ujxPklLhvyK-RGDsDKNxGPDh29VWVd5iJOh8hkiBTRyC/urban_dictionary.jpg?w=188&h=188&fit=crop')
+        .addFields(
+          { name: 'Definition', value: trim(answer.definition, 1024) },
+          { name: 'Example', value: trim(answer.example, 1024) },
+          { name: 'Rating', value: `${answer.thumbs_up} 👍. ${answer.thumbs_down} 👎.` },
+        )
+      message.channel.send(embed)
+    } catch (error) {
+      console.log(error)
+      return message.channel.send(new Discord.MessageEmbed()
+        .setColor("BLUE")
+        .setDescription(`No results were found for **${args.slice(1).join(" ")}**`)
+      )
+    }
+  }
+})
 client.login(process.env.token);
