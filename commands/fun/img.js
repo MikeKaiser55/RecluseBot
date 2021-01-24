@@ -17,8 +17,8 @@ module.exports = {
         console.log(random)
         const results = await google.scrape(query, 100)
         const hasil = results[random].url
-        message.channel.send(`Generate Picture...`)
         let embedpic = new Discord.MessageEmbed()
+            .setTitle("There you Go!")
             .setImage(hasil)
         message.channel.send(embedpic)
     }
